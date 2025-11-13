@@ -1,0 +1,126 @@
+body {
+    min-height: 100vh;
+    margin: 0; 
+    background: linear-gradient( #8a1b19, #320602);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+  }
+
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  /* Логотип */
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Ссылки */
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 5px 10px;
+  backdrop-filter: blur(4px);
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+  padding: 5px;
+  width: 180px;
+}
+
+.search-box button {
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
+}
+
+
+.login-btn {
+  background: #facc15;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #eab308;
+  transform: translateY(-2px);
+}
+
+
+
+
+img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+img:hover {
+  transform: translateY(-8px);
+  box-shadow:rgb(156, 2, 138);
+}
+
+
+
+
+
