@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MovieHub</title>
+  <title>Lumi | Discover Your Next Favorite Movie</title>
   <link rel="stylesheet" href="style.css">
-
-
 </head>
+
 <body>
-  
-    
-    <nav>
-      <div class="logo">MovieHub</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="Movies.html">Movies</a>
-        <a href="about.html">About</a>
-      
+
+  <nav>
+    <div class="logo">Lumi</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Movies.html">Movies</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search movies...">
+        <button>Search</button>
       </div>
-        <div class="nav-right">
-          <div class="search-box">
-            <input type="text" placeholder="Search movies...">
-            <button>Search</button>
-          </div>
-    
-          <button class="login-btn"  onclick="window.location.href='register.html'">Войти</button>
-        </div>
-    </nav>
-    
-   
+      <button class="login-btn" onclick="window.location.href='register.html'">Sign In</button>
+    </div>
+  </nav>
 
-    <img src="1683747988_background-size1920x1080-4e1694a6-75aa-4c36-9d4d-7fb6a3102005-bc5318781aad7f5c8520.jpg" alt="movie">
+  <header class="hero">
+    <button class="hero-cta" onclick="window.location.href='Movies.html'">Explore</button>
+  </header>
 
+  <main>
+    <section style="padding: 0 5%;">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">Trending Now</h2>
+      <div class="movies">
+        <!-- Movies will be loaded here via script.js -->
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-</html>
 
+</html>

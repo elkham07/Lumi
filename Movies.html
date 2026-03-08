@@ -1,103 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    body {
-        min-height: 100vh;
-        margin: 0; 
-        background: linear-gradient( #8a1b19, #320602);
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        justify-content: center; 
-        align-items: center;  
-      }
-      .movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
-
-.movie-card {
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
-.movie-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(6px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-
-  /* Логотип */
-  .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  /* Ссылки */
-  .nav-links {
-    display: flex;
-    gap: 15px;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-
-  .nav-links a:hover {
-    color: #ffd700;
-  }
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies | Lumi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="movies"></div>
-    <script src="script.js"></script>
 
-    <nav>
-        <div class="logo">MovieHub</div>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="Movies.html">Movies</a>
-          <a href="about.html">About</a>
-        </div>
-      </nav>
+<body>
+  <nav>
+    <div class="logo">Lumi</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Movies.html">Movies</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search movies...">
+        <button>Search</button>
+      </div>
+      <button class="login-btn" onclick="window.location.href='register.html'">Sign In</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="movies">
+      <!-- Movies will be loaded here via script.js -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

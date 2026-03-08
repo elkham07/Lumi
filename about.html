@@ -1,203 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - MovieHub</title>
+  <title>About | Lumi</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-    min-height: 100vh;
-    margin: 0; 
-    background: linear-gradient( #8a1b19, #320602);
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center; 
-    align-items: center;  
-  }
-  main{
-    color:rgb(233, 221, 221);
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(6px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
+    .about-container {
+      max-width: 800px;
+      margin: 120px auto 40px;
+      padding: 0 5%;
+      text-align: center;
+    }
 
-  /* Логотип */
-  .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+    .about-container h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
 
-  /* Ссылки */
-  .nav-links {
-    display: flex;
-    gap: 15px;
-  }
+    .about-container p {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
 
-  .nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
+    .contact-section {
+      background: var(--bg-card);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-top: 4rem;
+      text-align: left;
+    }
 
-  .nav-links a:hover {
-    color: #ffd700;
-  }
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
 
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
-.search-box {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  padding: 5px 10px;
-  backdrop-filter: blur(4px);
-}
+    .form-group label {
+      font-weight: 500;
+      color: var(--text-main);
+    }
 
-.search-box input {
-  border: none;
-  background: transparent;
-  color: #fff;
-  outline: none;
-  font-size: 1rem;
-  padding: 5px;
-  width: 180px;
-}
+    .form-group input,
+    .form-group textarea {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 1rem;
+      color: white;
+      font-family: inherit;
+      transition: var(--transition);
+    }
 
-.search-box button {
-  background: #2563eb;
-  border: none;
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-.search-box button:hover {
-  background: #1d4ed8;
-}
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 1rem;
+    }
 
-
-.login-btn {
-  background: #facc15;
-  border: none;
-  color: #000;
-  font-weight: bold;
-  padding: 8px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.login-btn:hover {
-  background: #eab308;
-  transform: translateY(-2px);
-}
-
-.contact {
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    color:#000;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-}
-
+    .submit-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
   </style>
 </head>
+
 <body>
-  
   <nav>
-    <div class="logo">MovieHub</div>
+    <div class="logo">Lumi</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="Movies.html">Movies</a>
       <a href="about.html">About</a>
     </div>
-      <div class="nav-right">
-        <div class="search-box">
-          <input type="text" placeholder="Search movies...">
-          <button>Search</button>
-        </div>
-  
-        <button class="login-btn"  onclick="window.location.href='register.html'">Войти</button>
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search movies...">
+        <button>Search</button>
       </div>
+      <button class="login-btn" onclick="window.location.href='register.html'">Sign In</button>
+    </div>
   </nav>
-  <main>
-    <section class="about-section">
-      
-      <br></br>
-      <br></br>
-      <br></br>
-        <h1>About MovieHub</h1>
-        <h3><p>
-          MovieHub is a learning project inspired by Netflix.  </p>
-          <p> was created as an initial step toward a full-fledged platform where users will be able</p>
-          <p>not only to search for but also to watch movies online.
-        </p></h3>
-        <br></br>
-        <h3><p> In the future, it is planned to add features such as user registration, favorites, and a recommendation system.</p>
-        <p> The goal of the project is to demonstrate the fundamentals of web development using HTML and CSS, along with basic APIs,</p> 
-        <p> and to gradually expand it with JavaScript.</p></h3>
-         
-        
-        <main>
-          <section class="contact">
-              <h1>Contact Us</h1>
-  
-              <form class="contact-form" action="#" method="post">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required>
-  
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required>
-  
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-  
-                  <button type="submit" class="btn">Send Message</button>
-              </form>
-          </section>
-      </main>
-      
-</main>
+
+  <main class="about-container">
+    <section class="about-hero">
+      <h1>About Lumi</h1>
+      <p>Lumi is a premium movie discovery platform designed for cinema enthusiasts. Our mission is to provide a
+        seamless way to explore the vast world of film and television.</p>
+      <p>Originally started as a learning project, Lumi has evolved into a showcase of modern web design and
+        cinematic experiences. We leverage the TMDB API to bring you the most up-to-date information on trending titles.
+      </p>
+    </section>
+
+    <section class="contact-section">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">Get in Touch</h2>
+      <p style="text-align: left; font-size: 1rem;">Have questions or suggestions? We'd love to hear from you. Fill out
+        the form below and our team will get back to you.</p>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell us something..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
